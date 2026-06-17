@@ -2,12 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Marlon Andrade Vicente Montenegro Portfolio</title>
+    <title>Marlon Andrade Portfolio</title>
 
     <style>
         body {
-            font-family: Arial;
             margin: 0;
+            font-family: Arial;
             background: #0d4f73;
             color: white;
         }
@@ -21,148 +21,140 @@
         header img {
             border-radius: 50%;
             width: 150px;
-            margin-bottom: 15px;
         }
 
-        section {
+        .container {
+            max-width: 1100px;
+            margin: auto;
             padding: 30px;
         }
 
-        .project {
-            background: white;
-            color: black;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 15px;
-        }
-
-        .project img {
-            width: 100%;
-            max-width: 700px;
-            display: block;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-        }
-
-        .caption {
-            text-align: center;
-            font-size: 14px;
-            margin-bottom: 25px;
-            color: #444;
-        }
-
-        h4 {
-            margin-top: 25px;
-            border-bottom: 2px solid #ddd;
+        h2 {
+            border-bottom: 2px solid white;
             padding-bottom: 5px;
         }
 
-        a {
-            color: #00A1DF;
-            text-decoration: none;
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .skill {
+            background: #00A1DF;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            color: black;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        a {
+            color: #007acc;
         }
     </style>
+
 </head>
 
 <body>
 
 <header>
-    <!-- ✅ EXACTO como está en tu repo -->
-    <img src="./Profile.jpg" alt="Profile Photo">
-
+    <img src="./Profile.jpg">
     <h1>Marlon Andrade Vicente</h1>
-    <p>Business Systems Analyst | .NET Developer</p>
+    <p>Senior Data Engineer | .NET Developer</p>
 </header>
 
-<section>
-    <h2>About Me</h2>
-    <p>
-        I design and build enterprise web applications using ASP.NET MVC,
-        SQL Server, and Windows Authentication (SSO). I focus on automation,
-        scalable architectures, and business process improvement.
-    </p>
-</section>
+<div class="container">
 
-<section>
-    <h2>Projects</h2>
-
-    <div class="project">
-        <h3>Fuzzy Homologation System</h3>
+    <!-- ABOUT -->
+    <section>
+        <h2>About Me</h2>
 
         <p>
-            Enterprise application designed to automate product homologation 
-            using fuzzy matching algorithms (Jaro-Winkler and Soundex).
+            Senior Data Engineer with over 8 years of experience designing and building
+            data-driven solutions and enterprise applications.
         </p>
 
-        <p><strong>Tech Stack:</strong> ASP.NET MVC, C#, SQL Server, jQuery, DataTables</p>
+        <p>
+            Systems Engineering graduate from Universidad Mariano Galvez de Guatemala,
+            with a Master's Degree in Information Security, and currently pursuing a
+            Master's in Artificial Intelligence and Innovative Applications at
+            National Dong Hwa University (NDHU). in Taiwan.
+        </p>
 
-        <a href="https://github.com/vicemo/fuzzy-homologation-system" target="_blank">
-            View Code on GitHub
-        </a>
+        <p>
+            Specialized in building scalable data architectures, ETL pipelines, predictive
+            analytics, and internal enterprise systems using modern technologies and cloud platforms.
+        </p>
+    </section>
 
-        <!-- 🔵 MAIN FLOW -->
-        <h4>Main Workflow</h4>
+    <!-- SKILLS -->
+    <section>
+        <h2>Skills & Tools</h2>
 
-        <img src="./inicio.png">
-        <div class="caption">
-            Main dashboard where users can perform auto match, manual matching,
-            skip records and manage homologation flow.
+        <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">SQL Server</div>
+            <div class="skill">C# .NET</div>
+            <div class="skill">Java</div>
+            <div class="skill">Power BI</div>
+            <div class="skill">Tableau</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">ETL / SSIS</div>
+            <div class="skill">Azure Data Factory</div>
+            <div class="skill">Data Engineering</div>
+            <div class="skill">Medallion Architecture</div>
+            <div class="skill">SSO Integration</div>
         </div>
+    </section>
 
-        <img src="./automatch.png">
-        <div class="caption">
-            Automatic matching process using fuzzy matching algorithms to suggest optimal matches.
+    <!-- PROJECTS -->
+    <section>
+        <h2>Projects</h2>
+
+        <div class="projects">
+
+            <div class="card">
+                <img src="./inicio.png">
+
+                <h3>Fuzzy Homologation System</h3>
+
+                <p>
+                    Enterprise application designed to automate product homologation using
+                    fuzzy matching algorithms (Jaro-Winkler & Soundex).
+                </p>
+
+                <p>
+                    Includes role-based access control, Windows Authentication (SSO),
+                    and advanced matching workflows.
+                </p>
+
+                <a href="https://github.com/vicemo/fuzzy-homologation-system">
+                    View Code
+                </a>
+            </div>
+
         </div>
+    </section>
 
-        <img src="./modomanual.png">
-        <div class="caption">
-            Manual matching option for selecting the correct homologation when automation is not sufficient.
-        </div>
-
-        <img src="./homologados.png">
-        <div class="caption">
-            view of homologated records ensuring consistency across datasets.
-        </div>
-
-        <img src="./no-encontrados.png">
-        <div class="caption">
-            records marked as "Not Found" for further analysis or correction.
-        </div>
-
-        <!-- 🔐 ADMIN -->
-        <h4>Admin & Role Management</h4>
-
-        <img src="./admin-panel.png">
-        <div class="caption">
-            admin dashboard for managing users and system access.
-        </div>
-
-        <img src="./admin-edit.png">
-        <div class="caption">
-            edit user roles including ADMIN and REVIEWER permissions.
-        </div>
-
-        <!-- ⚙️ INFRA -->
-        <h4>Architecture & Security</h4>
-
-        <img src="./iis.png">
-        <div class="caption">
-            IIS configuration with Windows Authentication (SSO) providing secure user access.
-        </div>
-
-        <img src="./code.png">
-        <div class="caption">
-            backend implementation using ASP.NET MVC and SQL Server.
-        </div>
-
-    </div>
-
-</section>
+</div>
 
 </body>
 </html>
