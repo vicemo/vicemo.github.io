@@ -40,7 +40,7 @@
             width: 100%;
             max-width: 700px;
             display: block;
-            margin: 15px auto;
+            margin: 20px auto;
             border-radius: 8px;
             box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
         }
@@ -48,8 +48,14 @@
         .caption {
             text-align: center;
             font-size: 14px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             color: #444;
+        }
+
+        h4 {
+            margin-top: 25px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
         }
 
         a {
@@ -66,7 +72,6 @@
 <body>
 
 <header>
-    <!-- ⚠️ verifica nombre exacto del archivo -->
     <img src="Profile.jpg" alt="Profile Photo">
 
     <h1>Marlon Andrade Vicente</h1>
@@ -77,8 +82,8 @@
     <h2>About Me</h2>
     <p>
         I design and build enterprise web applications using ASP.NET MVC,
-        SQL Server, and Windows Authentication (SSO). Focused on scalable
-        solutions, automation, and internal business systems.
+        SQL Server, and Windows Authentication (SSO). I focus on automation,
+        scalable architectures, and improving business workflows.
     </p>
 </section>
 
@@ -89,8 +94,9 @@
         <h3>Fuzzy Homologation System</h3>
 
         <p>
-            Internal enterprise application designed to automate product
-            homologation using fuzzy matching algorithms (Jaro-Winkler, Soundex).
+            Enterprise application built to automate product homologation
+            using fuzzy matching algorithms (Jaro-Winkler and Soundex).
+            It reduces manual effort and ensures data consistency across systems.
         </p>
 
         <p><strong>Tech Stack:</strong> ASP.NET MVC, C#, SQL Server, jQuery, DataTables</p>
@@ -99,40 +105,63 @@
             View Code on GitHub
         </a>
 
-        <!-- 🧠 SCREENSHOTS CON EXPLICACIÓN -->
+        <!-- 📊 MAIN FLOW -->
+        <h4>Main Workflow</h4>
 
-        <h4>Main Dashboard & Workflow</h4>
+        <img src="inicio.png">
+        <div class="caption">
+            Main interface where users can perform auto match, manual search,
+            assign homologations, skip records or mark them as not found.
+        </div>
 
-        <img src="image (5).png">
-        <div class="caption">Main interface showing pending homologations and fuzzy match suggestions</div>
+        <img src="automatch.png">
+        <div class="caption">
+            Automatic matching process using fuzzy matching algorithms
+            to suggest optimal data matches.
+        </div>
 
-        <img src="image (6).png">
-        <div class="caption">Automatic suggestions generated using Jaro-Winkler and Soundex algorithms</div>
+        <img src="modomanual.png">
+        <div class="caption">
+            Manual search mode allowing the user to validate and select
+            the correct homologation.
+        </div>
 
-        <img src="image (7).png">
-        <div class="caption">User interface for selecting correct homologation matches manually</div>
+        <img src="homologados.png">
+        <div class="caption">
+            View of successfully homologated records, ensuring consistency across systems.
+        </div>
 
-        <img src="image (8).png">
-        <div class="caption">Search and filtering capabilities for reviewing large datasets efficiently</div>
+        <img src="no-encontrados.png">
+        <div class="caption">
+            Records categorized as "Not Found" for further validation or analysis.
+        </div>
 
-        <h4>Admin & Role Management</h4>
+        <!-- 🔐 PERMISSIONS -->
+        <h4>Role-Based Access & Administration</h4>
 
-        <img src="screen9.png">
-        <div class="caption">Role-based access control with ADMIN and REVIEWER permissions</div>
+        <img src="admin-panel.png">
+        <div class="caption">
+            Admin dashboard for managing users and assigning roles.
+        </div>
 
-        <img src="screen10.png">
-        <div class="caption">Admin panel for assigning roles and managing users</div>
+        <img src="admin-edit.png">
+        <div class="caption">
+            Editing user roles with ADMIN and REVIEWER permissions.
+        </div>
 
-        <img src="screen11.png">
-        <div class="caption">User metadata and audit-based validation system</div>
+        <!-- ⚙️ INFRA -->
+        <h4>Architecture & Security</h4>
 
-        <h4>System Behavior</h4>
+        <img src="iis.png">
+        <div class="caption">
+            IIS configuration with Windows Authentication (SSO) for secure
+            and seamless user login.
+        </div>
 
-        <img src="screen12.png">
-        <div class="caption">Integration with Windows Authentication (SSO) for secure login</div>
-
-        <img src="screen13.png">
-        <div class="caption">Final homologation results ensuring data consistency across systems</div>
+        <img src="code.png">
+        <div class="caption">
+            Backend implementation using ASP.NET MVC and SQL Server integration.
+        </div>
 
     </div>
 
