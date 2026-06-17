@@ -18,6 +18,12 @@
             text-align: center;
         }
 
+        header img {
+            border-radius: 50%;
+            width: 150px;
+            margin-bottom: 15px;
+        }
+
         section {
             padding: 30px;
         }
@@ -28,6 +34,22 @@
             padding: 20px;
             border-radius: 10px;
             margin-top: 15px;
+        }
+
+        .project img {
+            width: 100%;
+            max-width: 700px;
+            display: block;
+            margin: 15px auto;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .caption {
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #444;
         }
 
         a {
@@ -44,7 +66,8 @@
 <body>
 
 <header>
-    <img src="profile.jpg" width="150" style="border-radius:50%;">
+    <!-- ⚠️ verifica nombre exacto del archivo -->
+    <img src="profile.jpg" alt="Profile Photo">
 
     <h1>Marlon Andrade Vicente</h1>
     <p>Business Systems Analyst | .NET Developer</p>
@@ -64,6 +87,7 @@
 
     <div class="project">
         <h3>Fuzzy Homologation System</h3>
+
         <p>
             Internal enterprise application designed to automate product
             homologation using fuzzy matching algorithms (Jaro-Winkler, Soundex).
@@ -74,6 +98,42 @@
         <a href="https://github.com/vicemo/fuzzy-homologation-system" target="_blank">
             View Code on GitHub
         </a>
+
+        <!-- 🧠 SCREENSHOTS CON EXPLICACIÓN -->
+
+        <h4>Main Dashboard & Workflow</h4>
+
+        <img src="screen5.png">
+        <div class="caption">Main interface showing pending homologations and fuzzy match suggestions</div>
+
+        <img src="screen6.png">
+        <div class="caption">Automatic suggestions generated using Jaro-Winkler and Soundex algorithms</div>
+
+        <img src="screen7.png">
+        <div class="caption">User interface for selecting correct homologation matches manually</div>
+
+        <img src="screen8.png">
+        <div class="caption">Search and filtering capabilities for reviewing large datasets efficiently</div>
+
+        <h4>Admin & Role Management</h4>
+
+        <img src="screen9.png">
+        <div class="caption">Role-based access control with ADMIN and REVIEWER permissions</div>
+
+        <img src="screen10.png">
+        <div class="caption">Admin panel for assigning roles and managing users</div>
+
+        <img src="screen11.png">
+        <div class="caption">User metadata and audit-based validation system</div>
+
+        <h4>System Behavior</h4>
+
+        <img src="screen12.png">
+        <div class="caption">Integration with Windows Authentication (SSO) for secure login</div>
+
+        <img src="screen13.png">
+        <div class="caption">Final homologation results ensuring data consistency across systems</div>
+
     </div>
 
 </section>
