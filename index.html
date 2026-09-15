@@ -296,6 +296,23 @@
   }
 
   /* CONTACT */
+  .contact-info{
+    display:flex;
+    gap:24px;
+    flex-wrap:wrap;
+    margin-bottom:20px;
+    font-size:14px;
+    color:var(--text-dim);
+  }
+
+  .contact-info a{
+    color:var(--text);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+  }
+
+  .contact-info a:hover{border-bottom-color:var(--accent);}
+
   .contact-row{display:flex;gap:16px;flex-wrap:wrap;}
 
   footer{
@@ -572,6 +589,41 @@
       </div>
     </div>
 
+    <div class="project-card">
+      <div class="carousel">
+        <div class="slides">
+          <img src="./login.png" alt="Login screen of the sales system">
+          <img src="./dashboard_ultimos_7_dias.png" alt="Dashboard with last 7 days of sales">
+          <img src="./new_sale.png" alt="New sale screen">
+          <img src="./credits.png" alt="Store credit accounts list">
+          <img src="./sales_reports.png" alt="Sales report with Excel export">
+        </div>
+      </div>
+      <div class="project-body">
+        <h3>Sales & Credit Management System</h3>
+        <p>
+          Fully functional N-layer sales platform (ApplicationWeb, BLL,
+          DAL, Entity, IOC) built in C# / ASP.NET MVC with a SQL Server
+          backend. Covers role-based login, a live dashboard, point-of-sale
+          checkout with printable receipts, store credit ("fiado")
+          management for trusted customers, inventory and user
+          administration, and date-range sales reports exportable to
+          Excel.
+        </p>
+        <div class="tag-row">
+          <span class="tag">C# .NET / ASP.NET MVC</span>
+          <span class="tag">N-Layer Architecture</span>
+          <span class="tag">SQL Server</span>
+          <span class="tag">Role-Based Access</span>
+          <span class="tag">Excel Export</span>
+        </div>
+        <div class="project-links">
+          <a href="./projects/sales-system.html">View project</a>
+          <a href="https://github.com/vicemo/sales-system">View code</a>
+        </div>
+      </div>
+    </div>
+
     <div class="project-card placeholder">
       Add your next project here: duplicate a .project-card block above,
       swap the images, title, description, and links.
@@ -584,14 +636,6 @@
   <div class="wrap">
     <h2>Contact</h2>
     <p>Looking for someone for your data or AI engineering team? Let's talk.</p>
-
-<p style="margin-top:16px; color:var(--text-dim); font-size:14px;">
-  Email: <a href="mailto:marlonvicente355@gmail.com" style="color:var(--text);">marlonvicente355@gmail.com</a>
-  &nbsp;·&nbsp;
-  Phone: <a href="https://wa.me/50250012120" style="color:var(--text);">+502 5001-2120</a>
-</p>
-
-<div class="contact-row" style="margin-top:16px;">
     <div class="contact-row" style="margin-top:16px;">
       <a class="btn primary" href="mailto:marlonvicente355@gmail.com">Send email</a>
       <a class="btn ghost" href="https://wa.me/50250012120">WhatsApp</a>
