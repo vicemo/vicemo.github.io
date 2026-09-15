@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marlon Andrade Vicente — Senior Data Engineer & .NET Developer</title>
-<meta name="description" content="Portafolio de Marlon Andrade Vicente, Senior Data Engineer y desarrollador .NET especializado en pipelines de datos y aplicaciones empresariales.">
+<title>Marlon Andrade Vicente — Senior Data Engineer & AI Engineer</title>
+<meta name="description" content="Portfolio of Marlon Andrade Vicente, Senior Data Engineer & AI Engineer specialized in Azure Databricks, PySpark, and enterprise AI solutions.">
 <link rel="icon" href="./favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,6 @@
     --text:#e9edf5;
     --text-dim:#9aa8bf;
     --accent:#d9a441;
-    --accent-dim:#8a6a2c;
     --radius:10px;
     --max:1080px;
   }
@@ -127,7 +126,7 @@
 
   header.hero .pitch{
     color:var(--text-dim);
-    max-width:60ch;
+    max-width:62ch;
     margin-bottom:24px;
   }
 
@@ -157,7 +156,7 @@
 
   section h2{font-size:22px;margin-bottom:20px;}
 
-  section p{color:var(--text-dim);max-width:68ch;}
+  section p{color:var(--text-dim);max-width:70ch;}
 
   section p + p{margin-top:12px;}
 
@@ -188,17 +187,43 @@
   }
 
   /* EXPERIENCE */
-  .exp-list{list-style:none;margin:0;padding:0;}
+  .job{padding:20px 0;border-top:1px solid var(--line);}
 
-  .exp-list li{
-    padding:14px 0;
-    border-top:1px solid var(--line);
+  .job:first-child{border-top:none;padding-top:0;}
+
+  .job-head{
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+    margin-bottom:10px;
+  }
+
+  .job-head h3{font-size:16px;}
+
+  .job-head span{color:var(--text-dim);font-size:13px;}
+
+  .job ul{
+    margin:0;
+    padding-left:18px;
     color:var(--text-dim);
   }
 
-  .exp-list li:first-child{border-top:none;}
+  .job li{margin-bottom:6px;}
 
-  .exp-list strong{color:var(--text);font-weight:500;}
+  /* EDUCATION */
+  .edu-list{list-style:none;margin:0;padding:0;}
+
+  .edu-list li{
+    padding:14px 0;
+    border-top:1px solid var(--line);
+  }
+
+  .edu-list li:first-child{border-top:none;}
+
+  .edu-list strong{color:var(--text);font-weight:500;display:block;margin-bottom:2px;}
+
+  .edu-list span{color:var(--text-dim);font-size:13px;}
 
   /* PROJECTS */
   .project-card{
@@ -258,13 +283,12 @@
 
   .project-links a:hover{border-bottom-color:var(--accent);}
 
-  /* placeholder card for next project */
   .project-card.placeholder{
     border-style:dashed;
     display:flex;
     align-items:center;
     justify-content:center;
-    min-height:180px;
+    min-height:140px;
     color:var(--text-dim);
     font-size:14px;
     text-align:center;
@@ -289,6 +313,7 @@
     header.hero .wrap{flex-direction:column;}
     .buttons{justify-content:center;}
     section h2{font-size:20px;}
+    .job-head{flex-direction:column;gap:4px;}
   }
 
 </style>
@@ -300,28 +325,28 @@
   <div class="wrap">
     <span class="brand">Marlon Andrade</span>
     <ul>
-      <li><a href="#about">Sobre mí</a></li>
-      <li><a href="#experience">Experiencia</a></li>
-      <li><a href="#projects">Proyectos</a></li>
-      <li><a href="#contact">Contacto</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <img src="./Profile.jpg" alt="Foto de Marlon Andrade Vicente">
+    <img src="./Profile.jpg" alt="Photo of Marlon Andrade Vicente">
     <div class="info">
       <h1>Marlon Andrade Vicente</h1>
-      <p class="role">Senior Data Engineer · .NET Developer</p>
+      <p class="role">Senior Data Engineer & AI Engineer · Azure · Databricks · PySpark · SQL</p>
       <p class="pitch">
-        Diseño pipelines de datos y aplicaciones empresariales que resuelven
-        problemas reales de negocio: desde autenticación SSO hasta motores
-        de homologación automática de registros.
+        I architect Azure-based big data platforms, scalable ETL/ELT pipelines,
+        and enterprise AI solutions — bridging the gap between data
+        infrastructure, machine learning, and executive Business Intelligence.
       </p>
       <div class="buttons">
-        <a class="btn primary" href="#projects">Ver proyectos</a>
-        <a class="btn ghost" href="#contact">Contactar</a>
+        <a class="btn primary" href="#projects">View projects</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
       </div>
     </div>
   </div>
@@ -329,31 +354,56 @@
 
 <section id="about">
   <div class="wrap">
-    <h2>Sobre mí</h2>
+    <h2>About me</h2>
     <p>
-      Senior Data Engineer con más de 8 años de experiencia diseñando
-      soluciones empresariales, construyendo pipelines de datos escalables
-      y desarrollando aplicaciones internas.
+      Senior Data Engineer & AI Engineer with 8+ years of experience
+      architecting Azure-based big data platforms, scalable ETL/ELT
+      pipelines, and enterprise AI solutions. Specialized in Azure
+      Databricks Medallion Architecture (Bronze/Silver/Gold layers),
+      PySpark, Delta Lake, and Databricks SQL, building end-to-end data
+      pipelines to train and deploy AI and Machine Learning models.
     </p>
     <p>
-      Ingeniero en Sistemas por la Universidad Mariano Gálvez, con una
-      Maestría en Seguridad de la Información, actualmente cursando una
-      Maestría en Inteligencia Artificial en la National Dong Hwa
-      University (Taiwán).
+      Proven track record of bridging the gap between complex data
+      infrastructure, deep learning algorithms, and executive Business
+      Intelligence (Power BI, advanced DAX) — translating complex technical
+      findings to non-technical stakeholders in global professional
+      environments.
     </p>
   </div>
 </section>
 
 <section id="experience">
   <div class="wrap">
-    <h2>Experiencia</h2>
-    <ul class="exp-list">
-      <li><strong>8+ años</strong> en ingeniería de datos y desarrollo de software</li>
-      <li>Construcción de aplicaciones empresariales con <strong>SSO</strong> y control de acceso por roles</li>
-      <li>Diseño de pipelines <strong>ETL</strong> e integraciones de datos</li>
-      <li>Trabajo con grandes volúmenes de datos y analítica</li>
-      <li>Modelos de <strong>Machine Learning</strong> y análisis predictivo</li>
-    </ul>
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <h3>Senior Data Engineer & Technical Consultant — IQVIA Guatemala</h3>
+        <span>July 2022 – Present</span>
+      </div>
+      <ul>
+        <li>Architect and engineer enterprise AI solutions and data platforms on Azure Databricks and PySpark to process, train, and deploy models over large-scale datasets</li>
+        <li>Design and optimize end-to-end ETL/ELT pipelines across Bronze, Silver, and Gold layers using Medallion Architecture for high reliability and data quality</li>
+        <li>Develop distributed data transformations with PySpark, Delta Lake, and Databricks SQL to support downstream AI applications and executive analytics</li>
+        <li>Write and optimize complex queries in Azure SQL and Databricks SQL for high-speed reporting and large-scale processing</li>
+        <li>Perform automated data validation, profiling, and pipeline troubleshooting across Azure Data Factory (ADF) and SSIS workflows</li>
+        <li>Build advanced, interactive Power BI dashboards (advanced DAX, optimized data modeling) for executive leadership</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <h3>Data Integration & Software Engineer — Farmandina / La Santé Guatemala</h3>
+        <span>Feb 2017 – Jul 2022</span>
+      </div>
+      <ul>
+        <li>Led enterprise data integration projects using SQL Server, SSIS, and Azure Data tools to automate reporting and business logic</li>
+        <li>Engineered a C# .NET MVC application integrated with SQL Server to automate incentive calculation algorithms, eliminating manual processing</li>
+        <li>Designed and deployed executive Power BI dashboards to track sales performance, incentive metrics, and key operational KPIs</li>
+        <li>Enforced data quality, consistency, and automated validation frameworks across cross-departmental data systems</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -362,78 +412,169 @@
     <h2>Skills</h2>
     <div class="skill-groups">
       <div class="skill-group">
-        <h3>Lenguajes</h3>
+        <h3>AI & Machine Learning</h3>
         <div class="chip-row">
-          <span class="chip">Python</span>
-          <span class="chip">C# .NET</span>
-          <span class="chip">Java</span>
+          <span class="chip">LLMs & RAG</span>
+          <span class="chip">Deep Learning</span>
+          <span class="chip">Computer Vision</span>
+          <span class="chip">Model Training</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Cloud & Data Engineering</h3>
+        <div class="chip-row">
+          <span class="chip">Microsoft Azure</span>
+          <span class="chip">Azure Databricks</span>
+          <span class="chip">Delta Lake</span>
+          <span class="chip">Medallion Architecture</span>
+          <span class="chip">PySpark</span>
+          <span class="chip">Azure Data Factory</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Databases</h3>
+        <div class="chip-row">
+          <span class="chip">Databricks SQL</span>
+          <span class="chip">Spark SQL</span>
+          <span class="chip">Azure SQL</span>
           <span class="chip">SQL Server</span>
         </div>
       </div>
       <div class="skill-group">
-        <h3>Datos e infraestructura</h3>
+        <h3>Programming</h3>
         <div class="chip-row">
-          <span class="chip">ETL / SSIS</span>
-          <span class="chip">Azure Data Factory</span>
-          <span class="chip">Data Engineering</span>
+          <span class="chip">Python</span>
+          <span class="chip">C# .NET</span>
+          <span class="chip">SQL</span>
         </div>
       </div>
       <div class="skill-group">
-        <h3>Analítica</h3>
+        <h3>BI & Governance</h3>
         <div class="chip-row">
           <span class="chip">Power BI</span>
-          <span class="chip">Tableau</span>
-          <span class="chip">Machine Learning</span>
+          <span class="chip">Advanced DAX</span>
+          <span class="chip">KPI Frameworks</span>
+          <span class="chip">Data Governance</span>
         </div>
       </div>
       <div class="skill-group">
-        <h3>Seguridad</h3>
+        <h3>Languages</h3>
         <div class="chip-row">
-          <span class="chip">SSO Integration</span>
+          <span class="chip">English — Fluent</span>
+          <span class="chip">Portuguese — Intermediate</span>
+          <span class="chip">Spanish — Native</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<section id="education">
+  <div class="wrap">
+    <h2>Education</h2>
+    <ul class="edu-list">
+      <li>
+        <strong>Master's Degree in Artificial Intelligence & Innovative Applications (In Progress)</strong>
+        <span>National Dong Hwa University, Taiwan · Sept 2026 – Present</span>
+      </li>
+      <li>
+        <strong>Master's Degree in Cybersecurity</strong>
+        <span>University Mariano Gálvez of Guatemala · 2025 – 2026</span>
+      </li>
+      <li>
+        <strong>Bachelor's Degree in Systems Engineering & Computer Science</strong>
+        <span>University Mariano Gálvez of Guatemala · 2018 – 2023</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
 <section id="projects">
   <div class="wrap">
-    <h2>Proyectos</h2>
+    <h2>Projects</h2>
 
     <div class="project-card">
       <div class="carousel">
         <div class="slides">
-          <img src="./inicio.png" alt="Pantalla de inicio del sistema de homologación">
-          <img src="./automatch.png" alt="Motor de coincidencia automática Automatch">
-          <img src="./modomanual.png" alt="Modo de revisión manual de registros">
-          <img src="./admin-panel.png" alt="Panel de administración del sistema">
-          <img src="./homologados.png" alt="Vista de registros homologados">
+          <img src="./inicio.png" alt="Main dashboard of the fuzzy homologation system">
+          <img src="./automatch.png" alt="Automatic fuzzy matching engine">
+          <img src="./modomanual.png" alt="Manual matching review screen">
+          <img src="./admin-panel.png" alt="Administration panel">
+          <img src="./homologados.png" alt="View of homologated records">
         </div>
       </div>
       <div class="project-body">
-        <h3>Fuzzy Homologation System</h3>
+        <h3>Fuzzy Homologation Platform — Pharmaceutical Data</h3>
         <p>
-          Aplicación empresarial para homologación automatizada de registros
-          usando coincidencia difusa (fuzzy matching) y autenticación
-          Windows SSO. Incluye motor de coincidencia automática, modo de
-          revisión manual y panel de administración con control de roles.
+          Developed an enterprise platform in C# / ASP.NET MVC to automate
+          the homologation and selection of pharmaceutical products from
+          different data sources. Implemented fuzzy matching techniques
+          using Jaro-Winkler and Soundex to identify potential product
+          matches and generate automatic recommendations, while allowing
+          non-technical users to review, select, and approve homologations
+          through a simple interface. The platform included automated and
+          manual matching workflows, homologated-record management, SSO
+          authentication, and role-based access control — significantly
+          simplifying product mapping and improving data quality across
+          pharmaceutical market datasets. Deployed on IIS with Windows
+          Authentication and backed by SQL Server, reducing manual mapping
+          effort by 90% across Central America and the Dominican Republic.
         </p>
         <div class="tag-row">
-          <span class="tag">C# .NET</span>
+          <span class="tag">C# .NET / ASP.NET MVC</span>
           <span class="tag">SQL Server</span>
           <span class="tag">IIS</span>
+          <span class="tag">Jaro-Winkler</span>
+          <span class="tag">Soundex</span>
           <span class="tag">SSO</span>
         </div>
         <div class="project-links">
-          <a href="./projects/homologation.html">Ver proyecto</a>
-          <a href="https://github.com/vicemo/fuzzy-homologation-system">Ver código</a>
+          <a href="./projects/homologation.html">View project</a>
+          <a href="https://github.com/vicemo/fuzzy-homologation-system">View code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-body">
+        <h3>AI-Powered Market Intelligence Platform</h3>
+        <p>
+          Engineered an AI-driven market intelligence platform leveraging
+          Databricks, PySpark, Delta Lake, Python, and SQL Server. Built
+          distributed data pipelines to ingest and structure massive sales
+          datasets for AI model training, natural language querying,
+          automated competitor analysis, and predictive reporting.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Azure Databricks</span>
+          <span class="tag">PySpark</span>
+          <span class="tag">Delta Lake</span>
+          <span class="tag">Python</span>
+          <span class="tag">SQL Server</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-body">
+        <h3>Multinational Sales Force Incentive Automation — Servier</h3>
+        <p>
+          Automated KPI and incentive computation workflows for a
+          multinational pharmaceutical sales force using SQL Server
+          optimization, reducing the overall processing cycle from 15 days
+          to 3 days through advanced query tuning and workflow automation.
+        </p>
+        <div class="tag-row">
+          <span class="tag">SQL Server</span>
+          <span class="tag">Query Optimization</span>
+          <span class="tag">Process Automation</span>
         </div>
       </div>
     </div>
 
     <div class="project-card placeholder">
-      Agrega aquí tu próximo proyecto: duplica el bloque .project-card de
-      arriba, cambia las imágenes, el título, la descripción y los links.
+      Add your next project here: duplicate a .project-card block above,
+      swap the images, title, description, and links.
     </div>
 
   </div>
@@ -441,11 +582,12 @@
 
 <section id="contact">
   <div class="wrap">
-    <h2>Contacto</h2>
-    <p>¿Buscas alguien para tu equipo de datos o desarrollo? Hablemos.</p>
+    <h2>Contact</h2>
+    <p>Looking for someone for your data or AI engineering team? Let's talk.</p>
     <div class="contact-row" style="margin-top:16px;">
-      <a class="btn primary" href="mailto:tuemail@ejemplo.com">Enviar email</a>
-      <a class="btn ghost" href="https://www.linkedin.com/in/tu-usuario">LinkedIn</a>
+      <a class="btn primary" href="mailto:marlonvicente355@gmail.com">Send email</a>
+      <a class="btn ghost" href="https://wa.me/50250012120">WhatsApp</a>
+      <a class="btn ghost" href="https://linkedin.com/in/marlon-vicente-680870248">LinkedIn</a>
       <a class="btn ghost" href="https://github.com/vicemo">GitHub</a>
     </div>
   </div>
