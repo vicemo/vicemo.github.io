@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sales & Credit Management System — Marlon Andrade Vicente</title>
+<meta name="description" content="N-layer C# / ASP.NET MVC sales platform with SQL Server backend, role-based access, credit (fiado) management, and Excel-exportable reporting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --ink:#0b1424;
+    --surface:#111d33;
+    --surface-2:#0e1829;
+    --line:#233151;
+    --text:#e9edf5;
+    --text-dim:#9aa8bf;
+    --accent:#d9a441;
+    --radius:10px;
+    --max:860px;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--text);
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+  }
+
+  h1,h2{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    margin:0;
+  }
+
+  img{max-width:100%;display:block;border-radius:10px;}
+
+  .wrap{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:48px 24px 72px;
+  }
+
+  .back{
+    display:inline-block;
+    font-size:14px;
+    color:var(--text-dim);
+    text-decoration:none;
+    margin-bottom:24px;
+  }
+
+  .back:hover{color:var(--text);}
+
+  h1{font-size:28px;margin-bottom:8px;}
+
+  .subtitle{color:var(--accent);font-size:15px;margin-bottom:24px;}
+
+  .tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;}
+
+  .tag{
+    font-size:12px;
+    padding:4px 10px;
+    border-radius:var(--radius);
+    background:var(--surface);
+    color:var(--text-dim);
+    border:1px solid var(--line);
+  }
+
+  .intro{color:var(--text-dim);max-width:75ch;margin-bottom:16px;}
+
+  .intro + .intro{margin-top:12px;}
+
+  section.block{
+    margin-top:48px;
+    padding-top:32px;
+    border-top:1px solid var(--line);
+  }
+
+  section.block h2{font-size:19px;margin-bottom:8px;}
+
+  section.block > p{color:var(--text-dim);margin-bottom:24px;max-width:75ch;}
+
+  figure{margin:0 0 28px;}
+
+  figure img{border:1px solid var(--line);}
+
+  figcaption{
+    color:var(--text-dim);
+    font-size:13px;
+    margin-top:10px;
+  }
+
+  .fig-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+  }
+
+  .links{display:flex;gap:16px;margin-top:8px;flex-wrap:wrap;}
+
+  .links a{
+    font-size:14px;
+    color:var(--accent);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+  }
+
+  .links a:hover{border-bottom-color:var(--accent);}
+
+  @media (max-width:640px){
+    h1{font-size:24px;}
+    .fig-row{grid-template-columns:1fr;}
+  }
+
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+  <a class="back" href="../index.html#projects">← Back to portfolio</a>
+
+  <h1>Sales & Credit Management System</h1>
+  <p class="subtitle">N-layer point-of-sale and credit platform · C# / ASP.NET MVC · SQL Server</p>
+
+  <div class="tag-row">
+    <span class="tag">C# .NET / ASP.NET MVC</span>
+    <span class="tag">N-Layer Architecture</span>
+    <span class="tag">SQL Server</span>
+    <span class="tag">Role-Based Access</span>
+    <span class="tag">Excel Export</span>
+  </div>
+
+  <p class="intro">
+    A fully functional, production-ready sales system built with an N-layer
+    .NET architecture (Application Web, BLL, DAL, Entity, IOC) and a SQL
+    Server backend. It covers the full retail cycle: authentication and
+    role-based access, a live dashboard, point-of-sale checkout, store
+    credit ("fiado") management for trusted customers, inventory control,
+    user administration, and exportable sales reporting.
+  </p>
+  <p class="intro">
+    The solution is organized into separate class libraries for business
+    logic, data access, entities, and dependency injection — keeping the
+    web layer thin and the domain logic testable and reusable.
+  </p>
+
+  <section class="block">
+    <h2>Architecture & database</h2>
+    <p>
+      The Visual Studio solution splits responsibilities across five
+      projects, and the data layer is backed by a normalized SQL Server
+      schema covering users, roles and menu permissions, product catalog,
+      sales, and credit accounts.
+    </p>
+
+    <div class="fig-row">
+      <figure>
+        <img src="../sistema_de_ventas_en_N_capas.png" alt="Visual Studio solution structure showing N-layer projects">
+        <figcaption>Solution Explorer: ApplicationWeb, BLL, DAL, Entity, and IOC projects.</figcaption>
+      </figure>
+      <figure>
+        <img src="../tablas_SQL_Server.png" alt="SQL Server tables list">
+        <figcaption>SQL Server schema: users, roles, products, sales, and credit tables.</figcaption>
+      </figure>
+    </div>
+
+    <figure>
+      <img src="../diagrama_entidad_relacion_sistema_de_ventas.png" alt="Entity-relationship diagram of the sales system">
+      <figcaption>Entity-relationship diagram covering access control, catalog, point-of-sale, and credit management.</figcaption>
+    </figure>
+  </section>
+
+  <section class="block">
+    <h2>Authentication & dashboard</h2>
+    <p>
+      Access is protected by a login screen, with users assigned one of
+      three roles — Administrator, Supervisor, or Employee — each seeing a
+      menu scoped to their permissions. After login, the dashboard
+      surfaces the numbers that matter at a glance: total sales, total
+      revenue, product count, and category count, plus a 7-day sales trend
+      and a breakdown of best-selling products.
+    </p>
+
+    <figure>
+      <img src="../login.png" alt="Login screen">
+      <figcaption>Role-based login screen.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../dashboard_ultimos_7_dias.png" alt="Dashboard showing last 7 days of sales">
+      <figcaption>Dashboard: sales, revenue, product/category totals, last-7-days trend, and top-selling products.</figcaption>
+    </figure>
+  </section>
+
+  <section class="block">
+    <h2>Point of sale & store credit</h2>
+    <p>
+      A cashier can start a new sale, attach a customer by ID/NIT or mark
+      it as a walk-in ("consumidor final"), search the live product
+      catalog, and check out with the subtotal, tax, and total calculated
+      automatically. Every completed sale generates a printable, branded
+      receipt.
+    </p>
+
+    <figure>
+      <img src="../new_sale.png" alt="New sale screen with client and product search">
+      <figcaption>New sale: customer lookup, live product search, and automatic totals.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../receipts.png" alt="Printable sales receipt">
+      <figcaption>Printable receipt with business branding, itemized detail, and totals.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../sales_history.png" alt="Sales history with date range filter">
+      <figcaption>Sales history, filterable by date range with a quick view of each receipt.</figcaption>
+    </figure>
+
+    <p>
+      For trusted customers, the system supports store credit ("fiado"):
+      products are added to a running account instead of being paid
+      immediately, and the balance owed is tracked per customer and across
+      the whole store.
+    </p>
+
+    <figure>
+      <img src="../credit_new.png" alt="New credit sale form">
+      <figcaption>Opening a new credit account: customer info, product list, and running total.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../credits.png" alt="List of customers with open credit accounts">
+      <figcaption>Credit accounts list, showing the balance owed per customer.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../credit_total.png" alt="Total amount owed across all credit accounts">
+      <figcaption>Store-wide total outstanding across all customer credit accounts.</figcaption>
+    </figure>
+  </section>
+
+  <section class="block">
+    <h2>Inventory & administration</h2>
+    <p>
+      Product categories and the product catalog are managed from the
+      Inventory section, both exportable to Excel for offline review. The
+      Administration section handles user accounts and roles
+      (Administrator, Supervisor, Employee), including password
+      management, plus business ("Negocio") configuration such as logo and
+      contact details used on receipts.
+    </p>
+
+    <figure>
+      <img src="../categorias.png" alt="Category management screen">
+      <figcaption>Category management, with Excel export.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../administracion_para_agregar_usuarios.png" alt="User administration screen">
+      <figcaption>User administration: roles, contact info, and account status.</figcaption>
+    </figure>
+  </section>
+
+  <section class="block">
+    <h2>Reporting</h2>
+    <p>
+      The reporting module lets staff filter completed sales by a start and
+      end date and export the full result set to Excel — useful for
+      accounting reconciliation or reviewing sales history outside the
+      app.
+    </p>
+
+    <figure>
+      <img src="../sales_reports.png" alt="Sales report with date range filter and Excel export">
+      <figcaption>Sales report: date-range filtering with one-click Excel export.</figcaption>
+    </figure>
+  </section>
+
+  <div class="links">
+    <a href="https://github.com/vicemo/sales-system">View source on GitHub</a>
+    <a href="../index.html#projects">Back to all projects</a>
+  </div>
+
+</div>
+
+</body>
+</html>
