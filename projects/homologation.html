@@ -1,79 +1,236 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Fuzzy Homologation System</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuzzy Homologation Platform — Marlon Andrade Vicente</title>
+<meta name="description" content="Enterprise C# / ASP.NET MVC platform for automated pharmaceutical product homologation using fuzzy matching (Jaro-Winkler, Soundex), SSO, and role-based access control.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
 
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            background: #0d4f73;
-            color: white;
-        }
+  :root{
+    --ink:#0b1424;
+    --surface:#111d33;
+    --surface-2:#0e1829;
+    --line:#233151;
+    --text:#e9edf5;
+    --text-dim:#9aa8bf;
+    --accent:#d9a441;
+    --radius:10px;
+    --max:860px;
+  }
 
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 30px;
-        }
+  *{box-sizing:border-box;}
 
-        .project img {
-            width: 100%;
-            margin: 20px 0;
-            border-radius: 8px;
-        }
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--text);
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+  }
 
-        .caption {
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-    </style>
+  h1,h2{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    margin:0;
+  }
+
+  img{max-width:100%;display:block;border-radius:10px;}
+
+  .wrap{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:48px 24px 72px;
+  }
+
+  .back{
+    display:inline-block;
+    font-size:14px;
+    color:var(--text-dim);
+    text-decoration:none;
+    margin-bottom:24px;
+  }
+
+  .back:hover{color:var(--text);}
+
+  h1{font-size:28px;margin-bottom:8px;}
+
+  .subtitle{color:var(--accent);font-size:15px;margin-bottom:24px;}
+
+  .tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;}
+
+  .tag{
+    font-size:12px;
+    padding:4px 10px;
+    border-radius:var(--radius);
+    background:var(--surface);
+    color:var(--text-dim);
+    border:1px solid var(--line);
+  }
+
+  .intro{color:var(--text-dim);max-width:75ch;margin-bottom:16px;}
+
+  .intro + .intro{margin-top:12px;}
+
+  section.block{
+    margin-top:48px;
+    padding-top:32px;
+    border-top:1px solid var(--line);
+  }
+
+  section.block h2{font-size:19px;margin-bottom:8px;}
+
+  section.block > p{color:var(--text-dim);margin-bottom:24px;max-width:75ch;}
+
+  figure{
+    margin:0 0 28px;
+  }
+
+  figure img{border:1px solid var(--line);}
+
+  figcaption{
+    color:var(--text-dim);
+    font-size:13px;
+    margin-top:10px;
+  }
+
+  .links{display:flex;gap:16px;margin-top:8px;flex-wrap:wrap;}
+
+  .links a{
+    font-size:14px;
+    color:var(--accent);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+  }
+
+  .links a:hover{border-bottom-color:var(--accent);}
+
+  @media (max-width:640px){
+    h1{font-size:24px;}
+  }
+
+</style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="wrap">
 
-<h1>Fuzzy Homologation System</h1>
+  <a class="back" href="../index.html#projects">← Back to portfolio</a>
 
-<p>
-Enterprise system built to automate data homologation using fuzzy matching
-(Jaro-Winkler and Soundex). Includes SSO authentication and role-based access.
-</p>
+  <h1>Fuzzy Homologation Platform</h1>
+  <p class="subtitle">Pharmaceutical product data standardization · C# / ASP.NET MVC</p>
 
-<h2>Workflow</h2>
+  <div class="tag-row">
+    <span class="tag">C# .NET / ASP.NET MVC</span>
+    <span class="tag">SQL Server</span>
+    <span class="tag">IIS</span>
+    <span class="tag">Windows Authentication (SSO)</span>
+    <span class="tag">Jaro-Winkler</span>
+    <span class="tag">Soundex</span>
+  </div>
 
-<img src="../inicio.png">
-<div class="caption">Main dashboard with auto match, manual match, and workflow actions.</div>
+  <p class="intro">
+    Developed an enterprise platform in C# / ASP.NET MVC to automate the
+    homologation and selection of pharmaceutical products from different
+    data sources. Implemented fuzzy matching techniques using Jaro-Winkler
+    and Soundex to identify potential product matches and generate
+    automatic recommendations, while allowing non-technical users to
+    review, select, and approve homologations through a simple interface.
+  </p>
+  <p class="intro">
+    The platform included automated and manual matching workflows,
+    homologated-record management, SSO authentication, and role-based
+    access control — significantly simplifying the product-mapping and
+    data-quality process for pharmaceutical market data across Central
+    America and the Dominican Republic.
+  </p>
 
-<img src="../automatch.png">
-<div class="caption">Automatic fuzzy matching process.</div>
+  <section class="block">
+    <h2>Matching workflow</h2>
+    <p>
+      The core of the platform is a two-track matching engine: an
+      automatic pass that scores candidate products using Jaro-Winkler
+      string similarity and Soundex phonetic matching, and a manual
+      review track for the cases the engine flags as uncertain. Approved
+      matches move into a homologated-records store; unresolved records
+      are kept visible so nothing silently falls through the cracks.
+    </p>
 
-<img src="../modomanual.png">
-<div class="caption">Manual selection of homologation.</div>
+    <figure>
+      <img src="../inicio.png" alt="Main dashboard with auto match, manual match, and workflow actions">
+      <figcaption>Main dashboard — auto match, manual match, and workflow actions in one view.</figcaption>
+    </figure>
 
-<img src="../homologados.png">
-<div class="caption">Homologated records view.</div>
+    <figure>
+      <img src="../automatch.png" alt="Automatic fuzzy matching process">
+      <figcaption>Automatic matching: candidate products are scored and ranked using Jaro-Winkler and Soundex.</figcaption>
+    </figure>
 
-<img src="../no-encontrados.png">
-<div class="caption">Records marked as not found.</div>
+    <figure>
+      <img src="../modomanual.png" alt="Manual selection of homologation">
+      <figcaption>Manual review mode, for cases the automatic engine can't confidently resolve on its own.</figcaption>
+    </figure>
 
-<h2>Admin & Security</h2>
+    <figure>
+      <img src="../homologados.png" alt="Homologated records view">
+      <figcaption>Homologated records view, showing approved and standardized product mappings.</figcaption>
+    </figure>
 
-<img src="../admin-panel.png">
-<div class="caption">Admin dashboard.</div>
+    <figure>
+      <img src="../no-encontrados.png" alt="Records marked as not found">
+      <figcaption>Records marked as not found, kept visible instead of being dropped from the pipeline.</figcaption>
+    </figure>
+  </section>
 
-<img src="../admin-edit.png">
-<div class="caption">User role management.</div>
+  <section class="block">
+    <h2>Admin & security</h2>
+    <p>
+      Access is gated by Windows Authentication (SSO) at the IIS level,
+      with role-based permissions inside the app itself — so reviewers,
+      approvers, and administrators each see only the actions relevant to
+      their role.
+    </p>
 
-<h2>Architecture</h2>
+    <figure>
+      <img src="../admin-panel.png" alt="Admin dashboard">
+      <figcaption>Admin dashboard for monitoring platform activity and user accounts.</figcaption>
+    </figure>
 
-<img src="../iis.png">
-<div class="caption">IIS + Windows Authentication configuration.</div>
+    <figure>
+      <img src="../admin-edit.png" alt="User role management">
+      <figcaption>Role management: administrators assign permissions per user without touching the database directly.</figcaption>
+    </figure>
+  </section>
 
-<img src="../code.png">
-<div class="caption">Backend implementation in ASP.NET MVC.</div>
+  <section class="block">
+    <h2>Architecture</h2>
+    <p>
+      The application is hosted on IIS with Windows Authentication handling
+      SSO, and SQL Server as the backing store for both product data and
+      homologation records. The backend is built in ASP.NET MVC, keeping
+      the fuzzy-matching logic, workflow state, and access control on the
+      server rather than exposing raw database access to end users.
+    </p>
+
+    <figure>
+      <img src="../iis.png" alt="IIS and Windows Authentication configuration">
+      <figcaption>IIS site configuration with Windows Authentication enabled.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../code.png" alt="Backend implementation in ASP.NET MVC">
+      <figcaption>Backend implementation in ASP.NET MVC.</figcaption>
+    </figure>
+  </section>
+
+  <div class="links">
+    <a href="https://github.com/vicemo/fuzzy-homologation-system">View source on GitHub</a>
+    <a href="../index.html#projects">Back to all projects</a>
+  </div>
 
 </div>
 
